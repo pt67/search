@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Js filter test for search</title>
+<style>
+*{
+text-align:center;
+text-decoration:none;
+}
+h1:first-letter{
+color:green;
+font-size:3em;
+}
+
+input{
+text-align:left;
+padding:10px 20px;
+border:1px solid green;
+border-radius:10px;
+}
+
+</style>
+</head>
+<body>
+<h1>Search Items</h1>
+<form>
+<p><input type="text" id="item" placeholder="Search Items .."></p>
+
+</form>
+<p id="result"> </p>
+
+
+
+<script>
+
+
+this.oninput = function(){
+var getinput = document.getElementById('item').value; 
+var myArray = ['aeroplane', 'bolero', 'bedroom', 'car', 'jeeep', 'telephone', 'dog', 'ear', 'egg', 'fish', 'fan', 'goat', 'glove', 'hen', 'human', 'inter', 'internet', 'jack', 'joke', 'knite', 'key', 'keep', 'lion', 'line', 'monkey', 'money', 'next', 'nest', 'net', 'open', 'orange', 'parrot', 'papaya', 'police', 'polite', 'queen', 'query', 'rest', 'rectangle', 'rough', 'seven', 'short', 'television', 'tea', 'umbrella', 'uber', 'up', 'ven', 'visit', 'watch', 'water', 'xero', 'xylan', 'zero', 'zebra'];
+
+var items = myArray.filter(name => name.includes(getinput));
+
+document.getElementById('result').innerHTML = "<p><a href=''>" + items[0] +"</a></p>";
+
+
+}
+</script>
+
+
+</body>
+</html>
